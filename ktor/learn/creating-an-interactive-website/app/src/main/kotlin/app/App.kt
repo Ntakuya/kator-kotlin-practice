@@ -1,5 +1,6 @@
 package app
 
+import app.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.response.*
@@ -9,6 +10,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 
 fun Application.module() {
+  configureTemplating()
   routing {
     get("/") {
       call.respondText("Hello World!")

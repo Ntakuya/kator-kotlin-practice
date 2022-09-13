@@ -1,5 +1,6 @@
 package app
 
+import app.handlers.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.request.*
@@ -13,4 +14,5 @@ fun Application.module() {
            call.respondText("Hello World")
        }
    }
+   handlers()
 }

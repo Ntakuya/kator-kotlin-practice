@@ -13,7 +13,7 @@ fun Application.handlers() {
   install(Locations)
   routing {
      get<GetHttpBins> {
-         call.respondText("C")
+	 call.sendHttpBinResponse()
      }
   }
 }

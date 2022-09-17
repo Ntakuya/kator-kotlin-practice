@@ -10,6 +10,7 @@ services:
       - db:/var/libs/postgre/data
     environment:
       - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=creating_an_interactive_website
 
 volumes:
   db: {}

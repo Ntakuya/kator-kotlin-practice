@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: creating_interactive_web_site_db
+    image: postgres:14
+    ports:
+      - 5432:5432
+    volumes:
+      - db:/var/libs/postgre/data
+    environment:
+      - POSTGRES_PASSWORD=password
+
+volumes:
+  db: {}

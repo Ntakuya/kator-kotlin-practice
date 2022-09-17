@@ -11,9 +11,5 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun Application.module() {
   configureTemplating()
-  routing {
-    get("/") {
-      call.respondText("Hello World!")
-    }
-  }
+  configureRouting()
 }

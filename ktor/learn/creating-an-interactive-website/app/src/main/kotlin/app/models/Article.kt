@@ -1,13 +1,13 @@
 package app.models
 
-import java.util.cocurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.AtomicInteger
 
 class Article
 private constructor(val id: Int, val title: String, val body: String) {
   companion object {
     private val idCounter = AtomicInteger()
 
-    fun newEntity(title: String, body: String) = Article(idCounter.getIdCounter(), title, body)  
+    fun newEntity(title: String, body: String) = Article(idCounter.getAndIncrement(), title, body)  
   }
 } 
 

@@ -2,6 +2,7 @@ val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
 val flyway_version: String by project
+val exposed_version: String by project
 
 application {
   mainClass.set("app.AppKt")
@@ -24,6 +25,9 @@ dependencies {
   implementation("io.ktor:ktor-server-freemarker:$ktor_version")
   implementation("io.ktor:ktor-server-cors:$ktor_version")
   implementation("org.postgresql:postgresql:42.2.14")
+  implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+  implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
+  implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
 }
 
 flyway {

@@ -2,6 +2,7 @@ package app
 
 import app.plugins.*
 import io.ktor.server.application.*
+import io.ktor.server.websocket.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
@@ -15,5 +16,8 @@ fun Application.module() {
          get("/") {
 	     call.respondText("Server")
 	 }
+     }
+     webSocket("/customer/1") {
+            sendSerialized(Customer(1, "Jane", "Smith"))
      }
 }

@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  db: 
+    image: postgres:14
+    container_name: sockert_db
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: sample
+  
+volumes:
+  db_data: {}
